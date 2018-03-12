@@ -1,19 +1,25 @@
 // scripts.js
-var span = $("span");
-    span.each(function(index, element) {
+$(function(){
+  var a = $('nav').find('a');
+  a.mouseover(function(){
+    $(this).css('color','red');
+  });
+  a.mouseout(function(){
+    $(this).css('color','black');
+  })
+  a.click(function(event){
+    event.preventDefault();
+    console.log('Siema!');
+  });
 });
-span.each(function(index, element) {
-	if(index % 2 == 0) {
-		$(element).css('color', 'red');
-	};
-});
-var paragraphs = $('p');
-paragraphs.each(function(index, element) {
-
-    var button = '<button class="btn" data-tmp="' + index + '">Click me</button>'
-    $(element).append(button)
-
-});
-$("button").click(function(){
-	alert($(this).attr("data-tmp"));
+$(function() {
+  var gallery = $('.gallery');
+  gallery.on('mouseover', 'img', function() {
+    $(this).css('filter', 'grayscale(0%)');
+    $(this).css('-webkit-filter', 'grayscale(0%)');
+  });
+  gallery.on('mouseout', 'img', function() {
+    $(this).css('filter', 'grayscale(100%)');
+    $(this).css('-webkit-filter', 'grayscale(100%)');
+  });
 });
