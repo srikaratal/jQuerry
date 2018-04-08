@@ -5,5 +5,5 @@ $(function(){
   carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
   var firstItem = carouselList.find('li:first');
   var lastItem = carouselList.find('li:last');
-}
+});
   
