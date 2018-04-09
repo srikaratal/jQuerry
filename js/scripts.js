@@ -13,6 +13,6 @@ $(function(){
 }
 });
 $(".control_next").click(function () {
-  $(this).show("#carousel ul", { direction: "right" }, 1000)});
+  $("#carousel ul").carousel( "#carousel ul", { direction: "left" }, 1000)});
 $(".control_prev").click(function () {
-  $(this).show("#carousel ul", { direction: "left" }, 1000)});
+  $("#carousel ul").carousel("#carousel ul", { direction: "right" }, 1000)});
